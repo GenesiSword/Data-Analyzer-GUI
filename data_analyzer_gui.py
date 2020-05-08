@@ -21,9 +21,6 @@ from sklearn.preprocessing import StandardScaler
 
 sns.set_style('white')
 
-#logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
-logging.disable(logging.CRITICAL)
-
 class Analyze():
     '''
     This class allows to:
@@ -349,9 +346,6 @@ if __name__ == "__main__":
                 ALPHA.datafr.dropna(inplace=True)
                 tk.messagebox.showinfo("NA values", "NA values has been deleted.")
                 window2natop.destroy()
-
-            print('''You can see your NA values''' \
-                  '''in plot below (marked as "1")''')
 
             sns.heatmap(ALPHA.datafr.isna(),
                         cmap='coolwarm',
